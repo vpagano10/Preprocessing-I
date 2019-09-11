@@ -1,1 +1,390 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+@font-face {
+  font-family: 'Gayathri';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Gayathri Regular'), local('Gayathri-Regular'), url(https://fonts.gstatic.com/s/gayathri/v1/MCoQzAb429DbBilWLLA_-ps.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'), url(https://fonts.gstatic.com/s/titilliumweb/v8/NaPecZTIAOhVxoMyOr9n_E7fdMPmCA.ttf) format('truetype');
+}
+body {
+  line-height: 1.2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Gayathri', sans-serif;
+  font-size: 2.4rem;
+}
+p,
+li,
+a {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.8rem;
+}
+button {
+  background-color: #1e5a6d;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 0.75%;
+  margin: 1% 0% 0% 0%;
+}
+button:hover {
+  color: #1e5a6d;
+  background-color: white;
+}
+a:hover {
+  color: white;
+}
+hr {
+  height: 2px;
+  background-color: black;
+}
+header {
+  background-color: #1e5a6d;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header a {
+  padding: 2%;
+  color: #1e5a6d;
+  text-decoration: none;
+  color: skyblue;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main-top {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  background-color: skyblue;
+  border: 1px solid black;
+}
+.main-top .top-one {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .main-top .top-one {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0% 2% 0%;
+  }
+  .main-top .top-one .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4%;
+  }
+  .main-top .top-one .social-links li {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main-top .top-two {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-top .top-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 0% 0% 0%;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.middle-content .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: skyblue;
+}
+@media (max-width: 500px) {
+  .middle-content .skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.middle-content .objective {
+  border: 1px solid black;
+  padding: 1%;
+  background-color: skyblue;
+}
+.middle-content .objective h2 {
+  padding: 0% 0% 2% 0%;
+}
+@media (max-width: 500px) {
+  .middle-content .objective {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.middle-content .skills {
+  border: 1px solid black;
+  padding: 1%;
+}
+.middle-content .skills .list-button {
+  width: 35%;
+  padding: 2%;
+  margin: 2%;
+}
+.bottom-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5% 0% 0% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .bottom-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.bottom-content .work {
+  padding: 2% 0% 2% 2%;
+  background-color: skyblue;
+  border: 1px solid black;
+}
+@media (max-width: 500px) {
+  .bottom-content .work {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.bottom-content .jobs-all {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .bottom-content .jobs-all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.bottom-content .job-x {
+  background-color: #1e5a6d;
+  color: white;
+  border: 1px solid black;
+  width: 100%;
+  padding: 4%;
+}
+.bottom-content .job-o {
+  background-color: skyblue;
+  border: 1px solid black;
+  width: 100%;
+  padding: 4%;
+}
+footer {
+  background-color: #1e5a6d;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0% 0% 0%;
+}
+footer a {
+  padding: 2%;
+  color: #1e5a6d;
+  text-decoration: none;
+  color: skyblue;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+  }
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

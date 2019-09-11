@@ -53,7 +53,263 @@ table {
     box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 html, body {
     height: 100%;
+}
+
+//Start for project
+
+//					IMPORTS
+@import url('https://fonts.googleapis.com/css?family=Gayathri|Titillium+Web&display=swap');
+
+//					VARIABLES
+@title-font: 'Gayathri', sans-serif;
+@main-font: 'Titillium Web', sans-serif;
+@color-one: skyblue;
+@color-two: rgb(30, 90, 109);
+@color-three: rgb(0, 119, 128);
+
+//					MIXINS
+.flex() {
+	display: flex;
+	justify-content: flex-end;
+}
+.a() {
+	padding: 2%;
+	color: @color-two;
+	text-decoration: none;
+}
+.width-n-margin() {
+	width: 80%;
+	margin: 0 auto;
+}
+.main-font() {
+	font-family: @main-font;
+	font-size: 1.8rem;
+}
+.title-font() {
+	font-family: @title-font;
+	font-size: 2.4rem;
+}
+
+//					TAGS
+body {
+	line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	.title-font();
+}
+
+p, li, a {
+	.main-font();
+}
+
+button {
+	background-color: @color-two;
+	color: white;
+	border: 1px solid black;
+	border-radius: 10%;
+	padding: .75%;
+	margin: 1% 0% 0% 0%;
+}
+
+button:hover {
+	color: @color-two;
+	background-color: white;
+}
+
+a:hover {
+	color: white;
+}
+
+hr {
+	height: 2px;
+	background-color: black;
+}
+
+//					MOBILE ELEMENTS
+//					MAIN NESTS
+header {
+	background-color: @color-two;
+	nav {
+		.flex();
+	}//end nav
+		a {
+			.a();
+			color: @color-one;
+		}//end a
+	@media (max-width: 500px) {
+		width: 100%;
+		nav {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end nav header mobile
+	}//end header mobile
+}//end header
+
+.main-top {
+	display: flex;
+	flex-direction: column;
+	padding: 2%;
+	background-color: @color-one;
+	border: 1px solid black;
+	.top-one {
+		.width-n-margin();
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 500px) {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2% 0% 2% 0%;
+			.name {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 4%;
+			}//end name mobile
+			.social-links {
+				li {
+					padding: 2%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}//end li elements mobile
+			}//end social links mobile
+		}//end media top one mobile
+	}//end top-one
+	.top-two {
+		.width-n-margin();
+		@media (max-width: 500px) {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end top-two media
+	}//end top-two
+}//end main-top
+
+.middle-content {
+	display: flex;
+	justify-content: space-between;
+	padding: 5% 0% 0% 0%;
+	// background-color: @color-one;
+	.width-n-margin();
+	@media (max-width: 500px) {
+		width:100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}//end media middle content mobile
+	.skills {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: @color-one;
+		@media (max-width: 500px) {
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end skills content mobile
+	}//end skills
+	.objective {
+		border: 1px solid black;
+		padding: 1%;
+		background-color: @color-one;
+		h2 {
+			padding: 0% 0% 2% 0%;
+		}//end h2 in objective
+		@media (max-width: 500px) {
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end media objective content mobile
+	}//end objective
+	.skills {
+		border: 1px solid black;
+		padding: 1%;
+		.list-button {
+			width: 35%;
+			padding: 2%;
+			margin: 2%;
+		}//end list-button
+	}//end skills
+}//end middle-content
+
+.bottom-content {
+	.width-n-margin();
+	padding: 5% 0% 0% 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-width: 500px) {
+		width:100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}//end media bottom content mobile
+	.work {
+		padding: 2% 0% 2% 2%;
+		background-color: @color-one;
+		border: 1px solid black;
+		@media (max-width: 500px) {
+			width:100%;
+			display: flex;
+			justify-content: center;
+		}//end media middle content mobile
+	}//end work
+	.jobs-all {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 500px) {
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end media jobs-all mobile
+	}//end jobs-all
+		.job-x {
+			background-color: @color-two;
+			color: white;
+			border: 1px solid black;
+			width: 100%;
+			padding: 4%;
+		}//end job-x
+		.job-o {
+			background-color: @color-one;
+			border: 1px solid black;
+			width: 100%;
+			padding: 4%;
+		}//end job-o
+}//end bottom-content
+
+footer {
+	background-color: @color-two;
+	nav {
+		display: flex;
+		justify-content: center;
+		margin: 5% 0% 0% 0%;
+	}//end nav footer
+		a {
+			.a();
+			color: @color-one;
+		}//end nav a footer
+	@media (max-width: 500px) {
+		width: 100%;
+		nav {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}//end nav footer mobile
+	}//end footer
 }
 
